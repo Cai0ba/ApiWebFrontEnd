@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/web-acad'),
+      dir: require('path').join(__dirname, './coverage/bootstrap-template'),
       subdir: '.',
       reporters: [
         { type: 'html' },
