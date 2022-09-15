@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SobreComponent } from './sobre/sobre.component';
-
+import { SobreComponent } from './views/sobre/sobre.component';
+import { HomeComponent } from './views/home/home.component';
 const routes: Routes = [
-{ path: "sobre", component: SobreComponent }
+{ path: "sobre", component: SobreComponent },
+{path: "home", component: HomeComponent },
+{ path: '', redirectTo: "home", pathMatch:'full' }
 ];
 
 @NgModule({
