@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SobreComponent } from './views/sobre/sobre.component';
 import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+import { LoginProfessorComponent } from './views/login-professor/login-professor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SobreComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    LoginProfessorComponent
   ],
   imports: [
     BrowserModule,

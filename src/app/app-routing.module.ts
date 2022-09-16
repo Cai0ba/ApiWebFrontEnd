@@ -1,10 +1,19 @@
+import { LoginProfessorComponent } from './views/login-professor/login-professor.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SobreComponent } from './views/sobre/sobre.component';
 import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 const routes: Routes = [
 { path: "sobre", component: SobreComponent },
 {path: "home", component: HomeComponent },
+{path: "loginAluno", component: LoginComponent },
+{path: "register", component: RegisterComponent },
+{path: "loginProfessor", component: LoginProfessorComponent },
+
+
+
 { path: '', redirectTo: "home", pathMatch:'full' }
 ];
 

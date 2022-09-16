@@ -4,25 +4,33 @@
       "id":1,
       "nome":"Caio Henrique Lopes Silva",
       "email": "caio.henrique.1204@gmail.com",
-      "senha":"123456"
+      "senha":"123456",
+      "cpf":"123456789",
+      "genero":1
     },
     {
       "id":2,
       "nome":"Pablo lucas",
       "email": "caio.henrique.1204@gmail.com",
-      "senha":"123456"
+      "senha":"123456",
+      "cpf":"123456789",
+      "genero":1
     },
     {
       "id":3,
       "nome":"Leonardo Said",
       "email": "caio.henrique.1204@gmail.com",
-      "senha":"123456"
+      "senha":"123456",
+      "cpf":"123456789",
+      "genero":1
     },
     {
       "id":4,
       "nome":"Nicolas Daldegan",
       "email": "caio.henrique.1204@gmail.com",
-      "senha":"123456"
+      "senha":"123456",
+      "cpf":"123456789",
+      "genero":0
     }
   ],
   "funcionarios":[
