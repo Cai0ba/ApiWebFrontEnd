@@ -1,3 +1,4 @@
+import { TelaFuncionarioComponent } from './views/tela-funcionario/tela-funcionario.component';
 import { LoginProfessorComponent } from './views/login-professor/login-professor.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,8 @@ const routes: Routes = [
 {path: "loginAluno", component: LoginComponent },
 {path: "register", component: RegisterComponent },
 {path: "loginProfessor", component: LoginProfessorComponent },
+{path: "telaFuncionario", component: TelaFuncionarioComponent },
+
 
 
 

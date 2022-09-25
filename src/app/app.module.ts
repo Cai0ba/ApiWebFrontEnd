@@ -11,6 +11,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { LoginProfessorComponent } from './views/login-professor/login-professor.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TelaFuncionarioComponent } from './views/tela-funcionario/tela-funcionario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    LoginProfessorComponent
+    LoginProfessorComponent,
+    TelaFuncionarioComponent
   ],
   imports: [
     BrowserModule,
