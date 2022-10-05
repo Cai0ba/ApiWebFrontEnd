@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TelaFuncionarioComponent } from './tela-funcionario.component';
+import { TelaFuncionarioComponent } from './tela-professor.component';
 
 describe('TelaFuncionarioComponent', () => {
   let component: TelaFuncionarioComponent;

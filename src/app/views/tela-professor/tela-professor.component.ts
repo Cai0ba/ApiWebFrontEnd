@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tela-funcionario',
-  templateUrl: './tela-funcionario.component.html',
-  styleUrls: ['./tela-funcionario.component.css']
+  templateUrl: './tela-professor.component.html',
+  styleUrls: ['./tela-professor.component.css']
 })
 export class TelaFuncionarioComponent implements OnInit {
 
