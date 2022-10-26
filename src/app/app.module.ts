@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TelaFuncionarioComponent } from './views/tela-professor/tela-professor.component';
 import { LoginAlunoComponent } from './views/login-aluno/login-aluno.component';
+import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginAlunoComponent } from './views/login-aluno/login-aluno.component';
     HomeComponent,
     RegisterComponent,
     LoginProfessorComponent,
-    TelaFuncionarioComponent
+    TelaFuncionarioComponent,
+    EsqueceuSenhaComponent
   ],
   imports: [
     BrowserModule,
