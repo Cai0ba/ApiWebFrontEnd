@@ -7,6 +7,7 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginAlunoComponent } from './views/login-aluno/login-aluno.component';
 import { RegisterComponent } from './views/register/register.component';
 import { EsqueceuSenhaComponent } from './views/esqueceu-senha/esqueceu-senha.component';
+import { NovaSenhaComponent } from './views/nova-senha/nova-senha.component';
 const routes: Routes = [
 
 {path: "sobre", component: SobreComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
 {path: "telaFuncionario", component: TelaFuncionarioComponent },
 {path: '', redirectTo: "home", pathMatch:'full' },
 {path: "register", component: RegisterComponent},
-{path: "esqueceu-senha", component: EsqueceuSenhaComponent}
+{path: "esqueceu-senha", component: EsqueceuSenhaComponent},
+{path: "nova-senha", component: NovaSenhaComponent}
 ];
 
 @NgModule({

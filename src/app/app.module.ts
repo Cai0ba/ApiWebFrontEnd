@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TelaFuncionarioComponent } from './views/tela-professor/tela-professor.component';
 import { LoginAlunoComponent } from './views/login-aluno/login-aluno.component';
 import { EsqueceuSenhaComponent } from './views/esqueceu-senha/esqueceu-senha.component';
+import { NovaSenhaComponent } from './views/nova-senha/nova-senha.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EsqueceuSenhaComponent } from './views/esqueceu-senha/esqueceu-senha.co
     RegisterComponent,
     LoginProfessorComponent,
     TelaFuncionarioComponent,
-    EsqueceuSenhaComponent
+    EsqueceuSenhaComponent,
+    NovaSenhaComponent
   ],
   imports: [
     BrowserModule,
