@@ -1,5 +1,5 @@
 import { Professores } from '../../models/professor';
-import { FuncionariosService } from '../../services/professor.service';
+import { ProfessorService } from '../../services/professor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -8,13 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-professor.component.css'],
 })
 export class LoginProfessorComponent implements OnInit {
-  constructor(private service: FuncionariosService, private Router: Router) {}
+  constructor(private service: ProfessorService, private Router: Router) {}
 
   ngOnInit(): void {}
 
-  getProfessores<Professores>() {
-    return this.service.getFuncionarios();
-  }
+
 prof: Professores = new Professores;
 
   login() {

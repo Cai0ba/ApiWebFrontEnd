@@ -1,69 +1,43 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Modalidades } from '../models/modalidades';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+};
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ModalidadesService {
-
   url = 'http://localhost:3000/modalidades';
 
-  constructor(private httpClient : HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  public getAll(): Observable<Modalidades[]> {
+    return this.http.get<Modalidades[]>(this.url);
   }
 
-  getModalidades(): Observable<Modalidades[]> {
-    return this.httpClient.get<Modalidades[]>(this.url)
-      .pipe(
-        retry(2),
-        catchError(this.handleError))
-  }
-  getModalidadeById(id: number): Observable<Modalidades> {
-    return this.httpClient.get<Modalidades>(this.url + '/' + id)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
+  public get(id: number): Observable<Modalidades> {
+    return this.http.get<Modalidades>(this.url + '/' + id);
   }
 
-  saveModalidade(modalidade: Modalidades): Observable<Modalidades> {
-    return this.httpClient.post<Modalidades>(this.url, JSON.stringify(modalidade), this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
+  public add(newModalidade: Modalidades) {
+    const modalidadeJson = JSON.stringify(Modalidades);
+    return this.http.post(this.url, modalidadeJson, httpOptions);
   }
 
-  updateModalidade(modalidade: Modalidades): Observable<Modalidades> {
-    return this.httpClient.put<Modalidades>(this.url + '/' + modalidade.id, JSON.stringify(modalidade), this.httpOptions)
-      .pipe(
-        retry(1),
-        catchError(this.handleError)
-      )
+  public update(modalidade: Modalidades): Observable<Modalidades> {
+    const modalidadeJson = JSON.stringify(modalidade);
+    return this.http.put<Modalidades>(
+      `${this.url}/${modalidade.id}`,
+      modalidadeJson,
+      httpOptions
+    );
   }
 
-  deleteCar(modalidade: Modalidades) {
-    return this.httpClient.delete<Modalidades>(this.url + '/' + modalidade.id, this.httpOptions)
-      .pipe(
-        retry(1),
-        catchError(this.handleError)
-      )
+  public delete(id: number): Observable<unknown> {
+    return this.http.delete(`${this.url}/${id}`);
   }
-
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Erro ocorreu no lado do client
-      errorMessage = error.error.message;
-    } else {
-      // Erro ocorreu no lado do servidor
-      errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
-  };
 }

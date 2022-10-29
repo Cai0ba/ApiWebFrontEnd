@@ -172,74 +172,17 @@
       </div>
 
       <div class="row">
-
-        <div class="col-lg-6">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Pablo Lucas</h4>
-              <span>Personal trainer</span>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4 mt-lg-0">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Leonardo Barbosa</h4>
-              <span>Personal trainer</span>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Nicolas Daldegan</h4>
-              <span>Personal trainer</span>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mt-4">
-          <div class="member d-flex align-items-start">
-            <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Caio Henrique</h4>
-              <span>Personal trainer</span>
-              <div class="social">
-                <a href=""><i class="ri-twitter-fill"></i></a>
-                <a href=""><i class="ri-facebook-fill"></i></a>
-                <a href=""><i class="ri-instagram-fill"></i></a>
-                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+       <div *ngFor="let professor of listaProfessores" class="col-lg-3 member  ">
+        <img [src]="professor.foto" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{professor.nome}}</h5>
+          <p class="card-text">
+          </p>
+       </div>
       </div>
-
     </div>
+  </div>
+
   </section><!-- End Doctors Section -->
 
   <!-- ======= Gallery Section ======= -->

@@ -1,70 +1,46 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Professores } from '../models/professor';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+};
 @Injectable({
   providedIn: 'root'
 })
-export class FuncionariosService {
+export class ProfessorService {
 
-  url = 'http://localhost:3000/funcionarios';
+  url = 'http://localhost:3000/professores';
 
-  constructor(private httpClient : HttpClient) {}
+  constructor(private http : HttpClient) {}
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  getFuncionarios() {
-    return this.httpClient.get<Professores[]>(this.url)
-      .pipe(
-        retry(2),
-        catchError(this.handleError))
-  }
-  getFuncionarioById(id: number): Observable<Professores> {
-    return this.httpClient.get<Professores>(this.url + '/' + id)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
+  public getAll(): Observable<Professores[]> {
+    return this.http.get<Professores[]>(this.url);
   }
 
-  saveFuncionario(professores: Professores): Observable<Professores> {
-    return this.httpClient.post<Professores>(this.url, JSON.stringify(professores), this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      )
+  public get(id: number): Observable<Professores> {
+    return this.http.get<Professores>(this.url + '/' + id);
   }
 
-  updateFuncionario(professores: Professores): Observable<Professores> {
-    return this.httpClient.put<Professores>(this.url + '/' + professores.id, JSON.stringify(professores), this.httpOptions)
-      .pipe(
-        retry(1),
-        catchError(this.handleError)
-      )
+  public add(newProfessor: Professores) {
+    const professoresJson = JSON.stringify(Professores);
+    return this.http.post(this.url, professoresJson, httpOptions);
   }
 
-  deleteFuncionario(professores: Professores) {
-    return this.httpClient.delete<Professores>(this.url + '/' + professores.id, this.httpOptions)
-      .pipe(
-        retry(1),
-        catchError(this.handleError)
-      )
+  public update(professores: Professores): Observable<Professores> {
+    const professoresJson = JSON.stringify(professores);
+    return this.http.put<Professores>(
+      `${this.url}/${professores.id}`,
+      professoresJson,
+      httpOptions
+    );
   }
 
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Erro ocorreu no lado do client
-      errorMessage = error.error.message;
-    } else {
-      // Erro ocorreu no lado do servidor
-      errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
-  };
-
+  public delete(id: number): Observable<unknown> {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }
