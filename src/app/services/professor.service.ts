@@ -27,7 +27,7 @@ export class ProfessorService {
   }
 
   public add(newProfessor: Professores) {
-    const professoresJson = JSON.stringify(Professores);
+    const professoresJson = JSON.stringify(newProfessor);
     return this.http.post(this.url, professoresJson, httpOptions);
   }
 
