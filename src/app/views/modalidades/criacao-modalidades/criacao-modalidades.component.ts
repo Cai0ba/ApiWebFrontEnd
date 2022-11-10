@@ -2,6 +2,7 @@ import { Modalidades } from 'src/app/models/modalidades';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalidadesService } from 'src/app/services/modalidades.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-criacao-modalidades',
   templateUrl: './criacao-modalidades.component.html',
@@ -18,6 +19,11 @@ public modalidade: Modalidades = new Modalidades()
     this.service.add(this.modalidade).subscribe((resposta)=>{
       console.log(resposta);
       this.rota.navigate(['/modalidades']);
+      Swal.fire({
+        icon: 'success',
+        title: 'Parabéns',
+        text: 'Modalidade criada com sucesso!',
+      })
     });
   }
 
