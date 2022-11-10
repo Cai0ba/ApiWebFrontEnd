@@ -29,7 +29,7 @@ export class AlunoService {
   }
 
   public add(newAluno: Aluno) {
-    const professoresJson = JSON.stringify(Aluno);
+    const professoresJson = JSON.stringify(newAluno);
     return this.http.post(this.url, professoresJson, httpOptions);
   }
 

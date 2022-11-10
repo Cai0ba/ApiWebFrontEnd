@@ -1,0 +1,21 @@
+<div class="card">
+<div class="card-header">
+  <a class="btn btn-primary" routerLink="/criar-modalidade">Criar</a>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">Modalidades</h5>
+   <div class="card">
+    <div *ngFor="let modalidade of listModalidade" >
+      <div class="row">
+   <div class="col-lg-5">
+     <h3>{{modalidade.nome}}</h3>
+     <button type="button" (click)="delete(modalidade.id)"class="btn btn-danger"style="margin-right: 1vh;">Deletar</button>
+     <button type="button" class="btn btn-warning" [routerLink]="['/editar-modalidade',modalidade.id]">Editar</button>
+   </div>
+      </div>
+     </div>
+   </div>
+
+  <br>
+  </div>
+</div>
