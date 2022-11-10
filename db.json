@@ -48,7 +48,7 @@
       "email": "leonardo@gmail.com",
       "senha": "123456",
       "isadm": 1,
-      "foto":"../../assets/img/doctors/doctors-2.jpg"
+      "foto": "../../assets/img/doctors/doctors-2.jpg"
     },
     {
       "id": 3,
@@ -56,7 +56,7 @@
       "email": "nicolas@gmail.com",
       "senha": "123456",
       "isadm": 1,
-      "foto":"../../assets/img/doctors/doctors-3.jpg"
+      "foto": "../../assets/img/doctors/doctors-3.jpg"
     },
     {
       "id": 4,
@@ -64,21 +64,21 @@
       "email": "caio@gmail.com",
       "senha": "123456",
       "isadm": 1,
-      "foto":"../../assets/img/doctors/doctors-4.jpg"
+      "foto": "../../assets/img/doctors/doctors-4.jpg"
     }
   ],
   "modalidades": [
     {
-      "id": 1,
-      "nome": "crossfit"
-    },
-    {
       "id": 2,
-      "nome": "musculação"
+      "nome": "musculaçãoTeste"
     },
     {
       "id": 3,
-      "nome": "spinning"
+      "nome": "spinningTeste"
+    },
+    {
+      "id": 8,
+      "nome": "Teste"
     }
   ]
 }

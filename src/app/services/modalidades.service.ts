@@ -24,7 +24,8 @@ export class ModalidadesService {
   }
 
   public add(newModalidade: Modalidades) {
-    const modalidadeJson = JSON.stringify(Modalidades);
+    const modalidadeJson = JSON.stringify(newModalidade);
+    console.log(newModalidade);
     return this.http.post(this.url, modalidadeJson, httpOptions);
   }
 
