@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Professores } from '../../models/professor';
 import { ProfessorService } from '../../services/professor.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,17 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-professor.component.css'],
 })
 export class LoginProfessorComponent implements OnInit {
-  constructor(private service: ProfessorService, private Router: Router) {}
+  public email: string = '';
+  public senha: string = '';
+  constructor(private auth: AuthService, private Router: Router) {}
 
   ngOnInit(): void {}
 
 
-prof: Professores = new Professores;
 
-  login() {
-   console.log(this.prof.senha)
-    if (this.prof.email == 'caio@gmail.com' && this.prof.senha == '123456') {
-      this.Router.navigate(['telaFuncionario']);
-    }
+  public login() {
+this.auth.autenticar(this.email,this.senha)
   }
 }
