@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
 @Injectable({
     providedIn: 'root'
 })
-export class CursoGuard implements CanActivate {
+export class ProfessorGuard implements CanActivate {
     constructor(private rota: Router,
                 private auth: AuthService) { }
 

@@ -16,6 +16,7 @@ import { NovaSenhaComponent } from './views/nova-senha/nova-senha.component';
 import { EditModalidadesComponent } from './views/modalidades/edit-modalidades/edit-modalidades.component';
 import { ModalidadesComponent } from './views/modalidades/modalidades/modalidades.component';
 import { CriacaoModalidadesComponent } from './views/modalidades/criacao-modalidades/criacao-modalidades.component';
+import { EditAlunosComponent } from './views/edit-alunos/edit-alunos.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CriacaoModalidadesComponent } from './views/modalidades/criacao-modalid
     EditModalidadesComponent,
     ModalidadesComponent,
     LoginAlunoComponent,
-    CriacaoModalidadesComponent
+    CriacaoModalidadesComponent,
+    EditAlunosComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ export class LoginProfessorComponent implements OnInit {
 
 
   public login() {
-this.auth.autenticar(this.email,this.senha)
+    console.log('aqui')
+this.auth.autenticarProf(this.email,this.senha)
   }
 }

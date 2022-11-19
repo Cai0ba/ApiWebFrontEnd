@@ -10,11 +10,11 @@ import { ProfessorService } from './professor.service';
 })
 export class AuthService {
     private autenticado: boolean = false;
-  
+
     constructor(private rota: Router,
                 private profService: ProfessorService) { }
 
-    public autenticar(email: string, senha: string) {
+    public autenticarProf(email: string, senha: string) {
         if (email && senha) {
 
             this.profService.buscarProfessor(email, senha)
@@ -23,7 +23,7 @@ export class AuthService {
 
                 if (usuario) {
                     this.autenticado = true;
-                    this.rota.navigate(['/home']);
+                    this.rota.navigate(['/tela-professor']);
                 } else {
                     this.autenticado = false;
                     Swal.fire({

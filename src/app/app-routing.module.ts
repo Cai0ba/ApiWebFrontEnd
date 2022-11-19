@@ -1,3 +1,4 @@
+import { EditAlunosComponent } from './views/edit-alunos/edit-alunos.component';
 import { EditModalidadesComponent } from './views/modalidades/edit-modalidades/edit-modalidades.component';
 import { CriacaoModalidadesComponent } from './views/modalidades/criacao-modalidades/criacao-modalidades.component';
 import { TelaFuncionarioComponent } from './views/tela-professor/tela-professor.component';
@@ -11,25 +12,26 @@ import { RegisterComponent } from './views/register/register.component';
 import { EsqueceuSenhaComponent } from './views/esqueceu-senha/esqueceu-senha.component';
 import { NovaSenhaComponent } from './views/nova-senha/nova-senha.component';
 import { ModalidadesComponent } from './views/modalidades/modalidades/modalidades.component';
-
+import { ProfessorGuard } from './guards/professor-guard.service';
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'sobre', component: SobreComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'loginAluno', component: LoginAlunoComponent },
+  { path: 'loginProfessor', component: LoginProfessorComponent },
+  { path: 'tela-professor', component: TelaFuncionarioComponent ,canActivate: [ProfessorGuard]},
+  { path: 'register', component: RegisterComponent },
+  { path: 'esqueceu-senha', component: EsqueceuSenhaComponent },
+  { path: 'nova-senha', component: NovaSenhaComponent },
+  { path: 'modalidades', component: ModalidadesComponent },
+  { path: 'criar-modalidade', component: CriacaoModalidadesComponent },
+  { path: 'editar-modalidade/:id', component: EditModalidadesComponent },
+  { path: 'editar-alunos/:id', component: EditAlunosComponent },
 
-{path: '', redirectTo: "home", pathMatch:'full' },
-{path: "sobre", component: SobreComponent },
-{path: "home", component: HomeComponent },
-{path: "loginAluno", component: LoginAlunoComponent },
-{path: "loginProfessor", component: LoginProfessorComponent },
-{path: "tela-professor", component: TelaFuncionarioComponent },
-{path: "register", component: RegisterComponent},
-{path: "esqueceu-senha", component: EsqueceuSenhaComponent},
-{path: "nova-senha", component: NovaSenhaComponent},
-{path:"modalidades", component:ModalidadesComponent},
-{path:"criar-modalidade", component:CriacaoModalidadesComponent},
-{path:"editar-modalidade/:id", component:EditModalidadesComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

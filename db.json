@@ -86,20 +86,20 @@
   ],
   "modalidades": [
     {
-      "id": 2,
-      "nome": "musculaçãoTeste"
-    },
-    {
-      "id": 3,
-      "nome": "spinningTeste"
-    },
-    {
       "id": 8,
       "nome": "Teste"
     },
     {
       "id": 9,
       "nome": "Teste2"
+    },
+    {
+      "id": 10,
+      "nome": "Teste"
+    },
+    {
+      "id": 11,
+      "nome": "aaaaaaa"
     }
   ]
 }
