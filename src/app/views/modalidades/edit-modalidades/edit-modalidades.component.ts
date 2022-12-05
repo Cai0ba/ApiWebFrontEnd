@@ -26,7 +26,7 @@ export class EditModalidadesComponent implements OnInit {
   }
   public update() {
     this.service.update(this.modalidade).subscribe((resp) => {
-      console.log(resp);
+      console.log("teste")
       this.rota.navigate(['/modalidades']);
     });
   }

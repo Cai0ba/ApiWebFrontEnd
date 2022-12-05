@@ -1,25 +1,7 @@
 {
   "alunos": [
     {
-      "id": 1,
-      "nome": "Joao",
-      "email": "joao@gmail.com",
-      "senha": "123456",
-      "cpf": "123456789"
-    },
-    {
-      "id": 2,
-      "nome": "José",
-      "email": "jose@gmail.com",
-      "senha": "123456",
-      "cpf": "123456789"
-    },
-    {
-      "id": 3,
-      "nome": "Maria",
-      "email": "maria@gmail.com",
-      "senha": "123456",
-      "cpf": "123456789"
+      "id": 3
     },
     {
       "id": 4,
@@ -34,20 +16,6 @@
       "email": "andre@email.com",
       "senha": "123456789",
       "cpf": "11111111111"
-    },
-    {
-      "id": 6,
-      "nome": "qwertyuiop12345673",
-      "email": "caio@email.com",
-      "senha": "231231",
-      "cpf": "12345678909"
-    },
-    {
-      "id": 7,
-      "nome": "zxcvbnm,",
-      "email": "emailswal.com",
-      "senha": "32123132",
-      "cpf": "23123121321"
     }
   ],
   "professores": [
@@ -86,20 +54,8 @@
   ],
   "modalidades": [
     {
-      "id": 8,
-      "nome": "Teste"
-    },
-    {
-      "id": 9,
-      "nome": "Teste2"
-    },
-    {
-      "id": 10,
-      "nome": "Teste"
-    },
-    {
-      "id": 11,
-      "nome": "aaaaaaa"
+      "id": 1,
+      "nome": "oioioioi234589"
     }
   ]
 }

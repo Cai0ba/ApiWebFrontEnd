@@ -1,6 +1,4 @@
 import { AuthService } from './../../services/auth.service';
-import { Professores } from '../../models/professor';
-import { ProfessorService } from '../../services/professor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -15,10 +13,7 @@ export class LoginProfessorComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
-
   public login() {
-    console.log('aqui')
-this.auth.autenticarProf(this.email,this.senha)
+    this.auth.autenticarProf(this.email, this.senha);
   }
 }

@@ -17,7 +17,6 @@ public modalidade: Modalidades = new Modalidades()
 
   public criar() {
     this.service.add(this.modalidade).subscribe((resposta)=>{
-      console.log(resposta);
       this.rota.navigate(['/modalidades']);
       Swal.fire({
         icon: 'success',

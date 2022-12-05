@@ -42,6 +42,11 @@ export class AlunoService {
     );
   }
 
+
+  public buscarAluno(email: string, senha: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.url}?email=${email}&senha=${senha}`);
+}
+
   public delete(id: number): Observable<unknown> {
     return this.http.delete(`${this.url}/${id}`);
   }

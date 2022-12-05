@@ -17,6 +17,8 @@ import { EditModalidadesComponent } from './views/modalidades/edit-modalidades/e
 import { ModalidadesComponent } from './views/modalidades/modalidades/modalidades.component';
 import { CriacaoModalidadesComponent } from './views/modalidades/criacao-modalidades/criacao-modalidades.component';
 import { EditAlunosComponent } from './views/edit-alunos/edit-alunos.component';
+import { TelaAlunoComponent } from './views/tela-aluno/tela-aluno.component';
+import { AlunosComponent } from './views/alunos/alunos.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { EditAlunosComponent } from './views/edit-alunos/edit-alunos.component';
     LoginAlunoComponent,
     CriacaoModalidadesComponent,
     EditAlunosComponent,
+    TelaAlunoComponent,
+    AlunosComponent,
   ],
   imports: [
     BrowserModule,

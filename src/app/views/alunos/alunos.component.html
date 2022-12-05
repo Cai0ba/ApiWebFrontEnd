@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+    <a class="btn btn-primary" routerLink="/criar-modalidade">Criar</a>
+  </div>
+    <div class="card-body">
+      <h5 class="card-title">Alunos</h5>
+     <div class="card">
+      <div *ngFor="let aluno of listAluno" >
+        <div class="row">
+     <div class="col-lg-5">
+       <h3>{{aluno.nome}}</h3>
+       <button type="button" (click)="delete(aluno.id)"class="btn btn-danger"style="margin-right: 1vh;">Deletar</button>
+       <button type="button" class="btn btn-warning" [routerLink]="['/editar-alunos',aluno.id]">Editar</button>
+     </div>
+        </div>
+       </div>
+     </div>
+
+    <br>
+    </div>
+  </div>

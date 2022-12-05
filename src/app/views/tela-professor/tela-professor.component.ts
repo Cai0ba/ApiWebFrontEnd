@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaFuncionarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rota: Router) { }
 
   ngOnInit(): void {
+
   }
+  public redirectToMod(){
+    this.rota.navigate(['/modalidades']);
+  }
+  public redirectToAluno(){
+    this.rota.navigate(['/alunos']);
+  }
+
 
 }

@@ -13,9 +13,6 @@ export class ProfessorGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot,
                 state: RouterStateSnapshot) {
-
-        console.log('canActivate');
-
         if (this.auth.isAutenticado()) {
             return true;
         } else {
